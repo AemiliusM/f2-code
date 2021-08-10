@@ -6,6 +6,16 @@ export function stringItUp(arr) {
     return arr.map((num) => ''+num);
 }
 
-export function capitalNames(arr){
-    return arr.map((string) => string.slice(0,1).toUpperCase() + string.slice(1, string.length));
+export function capitalName(arr) {
+    return arr.map((item) => {
+        const letterDown = item.toLowerCase();
+        const capName = letterDown.charAt(0).toUpperCase() + letterDown.slice(1);
+        return capName;
+    })
+}
+
+export function onlyName(arr) {
+    return arr.map((item) => {
+        return item.name;
+    })
 }
