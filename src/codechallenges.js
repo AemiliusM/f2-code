@@ -19,3 +19,19 @@ export function onlyName(arr) {
         return item.name;
     })
 }
+
+export function makeStrings(arr) {
+    return arr.map((arr) => {
+        if (arr.age >= 18) {
+            return arr.name + " can go to The Matrix";
+        }return arr.name + " is under age!!";
+    })
+}
+
+export function readyToPutInTheDOM(arr){
+    return arr.map((item) => {
+        const pName = item.name;
+        const pAge = item.age;
+        return `<h1>${pName}</h1><h2>${pAge}</h2>`;
+    })
+}
