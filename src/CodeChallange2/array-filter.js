@@ -7,3 +7,8 @@ export function evensOnly(arr) {
 }
 
 
+export function fiveCharactersOrFewerOnly(arr) {
+    return arr.filter(word => word.length <=5)
+}
+
+
