@@ -9,3 +9,8 @@ export function greatestToLeast(arr) {
     })
 }
 
+export function lengthSort(arr) {
+    return arr.sort(function(a ,b){
+        return a.length - b.length
+    })
+}
