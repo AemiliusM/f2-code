@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly } from './array-filter.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati } from './array-filter.js';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -18,3 +18,18 @@ test('Evens only', () => {
     expect(output).toEqual(['by', 'dog', 'wolf', 'eaten']); // assert
   });
   
+  test('people who are Illuminati', () => {
+    const input = [
+        { name: 'Angelina Jolie', member: true },
+        { name: 'Eric Jones', member: false },
+        { name: 'Paris Hilton', member: true },
+        { name: 'Kayne West', member: false },
+        { name: 'Bob Ziroll', member: true }
+    ]; // arrange
+  const output = peopleWhoBelongToTheIlluminati(input); // act
+    expect(output).toEqual([ 
+        { name: 'Angelina Jolie', member: true }, 
+        { name: 'Paris Hilton', member: true }, 
+        { name: 'Bob Ziroll', member: true } 
+    ]); // assert
+});
