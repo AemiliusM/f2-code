@@ -15,14 +15,3 @@ export function getFilteredKey(obj) {
     const filterArr = Object.keys(obj);
     return filterArr.filter(key => key === 'age')
 }
-
-export function getArrayOfKeysAndValues(obj) {
-    return Object.entries(obj);
-}
-
-export function sortedArraysByValuesLength(obj) {
-    const sortedArrVL = Object.entries(obj)
-    return sortedArrVL.sort(function(a,b) {
-        return b[1].length - a[1].length;
-    })
-}
