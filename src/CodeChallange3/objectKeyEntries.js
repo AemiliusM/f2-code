@@ -19,3 +19,10 @@ export function getFilteredKey(obj) {
 export function getArrayOfKeysAndValues(obj) {
     return Object.entries(obj);
 }
+
+export function sortedArraysByValuesLength(obj) {
+    const sortedArrVL = Object.entries(obj)
+    return sortedArrVL.sort(function(a,b) {
+        return b[1].length - a[1].length;
+    })
+}

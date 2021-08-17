@@ -1,4 +1,4 @@
-import { capitalizeObjectKeys, sortedKeys, getFilteredKey, getArrayOfKeysAndValues} from '../CodeChallange3/objectKeyEntries.js';
+import { capitalizeObjectKeys, sortedKeys, getFilteredKey, getArrayOfKeysAndValues, sortedArraysByValuesLength} from '../CodeChallange3/objectKeyEntries.js';
 
 test('it capitalizes the keys', () => {
   const dataObject = { name: 'Angelina Jolie', age: 80 };
@@ -24,3 +24,10 @@ test('take an object and return a new array of arrays key vaule pairs', () => {
   const output = getArrayOfKeysAndValues(dataObject); //act
   expect(output).toEqual([['name', 'Angelina Jolie'], ['age', 80]]); //assert
 });
+
+test('to give back an array of arrays of key value pairs sorted longest to shortest by values length', () => {
+  const dataObject = { name: 'Bob', friend: 'Tom Hanks', location: 'Los Angeles' }; //arrange
+  const output = sortedArraysByValuesLength(dataObject); //act
+  expect(output).toEqual([['location', 'Los Angeles'], ['friend', 'Tom Hanks'], ['name', 'Bob']]); //assert
+});
+
