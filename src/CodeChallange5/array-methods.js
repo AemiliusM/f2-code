@@ -23,3 +23,13 @@ export function wordsToCharList(str) {
 //         return stuff.split('')[0]
 //     })
 // } This one looks good, but it says I am not getting the right info back
+
+export function removeLastCharacters(str, characters) {
+    if(characters <= 0){
+        return str 
+    }
+    if (characters > str.length){
+        return ''
+    }
+    return str.slice(0, -characters)
+}
