@@ -16,6 +16,19 @@ export function totalCharacters(arr) {
     return total;
 }
 
-export function hasChildEntries(arr, character) {
-    
-}
+export function hasChildrenEntries(arr, character) {
+    let gotObj; 
+    arr.forEach(item => {
+            if (item.name === character){
+                gotObj = item
+            }            
+    })        
+    if (gotObj['children'].length){
+        return true
+    } else {
+        return false
+    }
+} 
+
+  
+
