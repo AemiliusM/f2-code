@@ -28,6 +28,14 @@ export function hasChildrenEntries(arr, character) {
     } else {
         return false
     }
+}
+
+
+export function sortByChildren(arr){
+    const kids = arr.sort((a, b) => {
+        return a.children.length - b.children.length
+    })
+    return kids
 } 
 
   
