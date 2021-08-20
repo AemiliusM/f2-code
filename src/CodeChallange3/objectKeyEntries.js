@@ -2,6 +2,7 @@ export function capitalizeObjectKeys(obj) {
     const objArr = Object.keys(obj);
     return objArr.map(str => str.toUpperCase());
     
+
 }
 
 export function sortedKeys(obj) {
@@ -26,3 +27,4 @@ export function sortedArraysByValuesLength(obj) {
         return b[1].length - a[1].length;
     })
 }
+
